@@ -1,0 +1,18 @@
+{
+  "name": "application",
+  "version": "0.0.1",
+  "description": "test app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/unit --recursive",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}
