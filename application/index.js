@@ -7,7 +7,7 @@ app.get('/:instanceId/', function (req, res) {
     let instanceId = req.params['instanceId'];
     let text = 'Hello! ';
     text += `The current instance is "${instanceId}""`;
-    console.log(req);
+    console.log(req.hostname);
     res.send(text);
 });
 

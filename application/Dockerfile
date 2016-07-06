@@ -5,8 +5,7 @@ MAINTAINER Felipe Constantino <felipecdo50@gmail.com>
 RUN groupadd -r node && useradd -r -g node node
 
 # Create the app folder and install the global dependencies
-RUN mkdir -p /var/www/nodeapp \
-  && npm install forever -g
+RUN mkdir -p /var/www/nodeapp 
 
 # Give permission to node user read
 RUN chown -R node /var/www/nodeapp
@@ -19,8 +18,8 @@ RUN npm install --production
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 USER node
 
-CMD ["/bin/bash", "-c", "npm run forever"]
+CMD ["/bin/bash", "-c", "npm start"]
