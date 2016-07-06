@@ -1,3 +1,5 @@
+docker rm -f $(docker ps --format "{{.ID}}")
+
 docker build -t uux/app ./application
 
 docker run -d -p 3000:3000 --name beapp uux/app
